@@ -5,15 +5,6 @@ import { PinContainer } from "./magicUI/3d-pin";
 import Image from "next/image";
 import imageBg from "@/assets/eg.jpg";
 
-interface projectType {
-  id: number;
-  name: string;
-  description: string;
-  image: string;
-  techStack: string[];
-  github: string;
-  live: string;
-}
 const AnimatedPinDemo = ({ project }: any) => {
   const { name, description, github } = project;
 
