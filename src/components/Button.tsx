@@ -8,7 +8,7 @@ interface MyProps {
 const Button: FC<MyProps> = (props) => {
   return (
     <ShineBorder
-      className="text-center text-xl md:text-2xl capitalize cursor-pointer"
+      className="text-center text-xl capitalize cursor-pointer"
       color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
     >
       {props.children}

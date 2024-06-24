@@ -1,11 +1,16 @@
 import React from "react";
 import OrbitingCircles from "./magicUI/orbitContact";
 
+import { FaGithub } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaYoutube } from "react-icons/fa";
+
 const OrbitContact = () => {
   return (
     <div className="relative flex w-screen h-screen items-center justify-center overflow-hidden rounded-lg bg-background">
       <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-        Hello World
+        Contact Me
       </span>
 
       <OrbitingCircles
@@ -14,7 +19,7 @@ const OrbitContact = () => {
         delay={20}
         radius={80}
       >
-        Hello
+        <FaSquareXTwitter />
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[30px] w-[30px] border-none bg-transparent"
@@ -22,7 +27,7 @@ const OrbitContact = () => {
         delay={10}
         radius={80}
       >
-        World
+        <AiFillInstagram />
       </OrbitingCircles>
 
       <OrbitingCircles
@@ -31,7 +36,7 @@ const OrbitContact = () => {
         duration={20}
         reverse
       >
-        Akhil
+        <FaYoutube className="text-2xl" />
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[50px] w-[50px] border-none bg-transparent"
@@ -40,7 +45,7 @@ const OrbitContact = () => {
         delay={20}
         reverse
       >
-        Palsra
+        <FaGithub className="text-2xl" />
       </OrbitingCircles>
     </div>
   );
