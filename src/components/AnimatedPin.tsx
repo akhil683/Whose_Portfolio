@@ -11,7 +11,7 @@ const AnimatedPinDemo = ({ project }: any) => {
   return (
     <PinContainer title={`github/${name}`} href={github}>
       <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-full ">
-        <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+        <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-lg text-slate-100">
           {name}
         </h3>
         <div className="flex overflow-hidden w-full h-96 flex-1 rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500">
