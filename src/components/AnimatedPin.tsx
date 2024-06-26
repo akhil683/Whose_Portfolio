@@ -6,30 +6,39 @@ import Image from "next/image";
 import imageBg from "@/assets/eg.jpg";
 
 const AnimatedPinDemo = ({ project }: any) => {
-  const { name, description, github } = project;
+  const { name, description, github, techStack } = project;
 
   return (
-    <div className="flex items-center justify-center ">
-      <PinContainer title={`github/${name}`} href={github}>
-        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            {name}
-          </h3>
-          <div className="text-base !m-0 !p-0 font-normal">
-            <span className="text-slate-500 ">{description}</span>
-          </div>
-          <div className="flex overflow-hidden flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500">
-            <Image
-              src={imageBg}
-              width={400}
-              height={80}
-              alt={name}
-              loading="lazy"
-            />
-          </div>
+    <PinContainer title={`github/${name}`} href={github}>
+      <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-full ">
+        <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+          {name}
+        </h3>
+        <div className="flex overflow-hidden w-full h-96 flex-1 rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500">
+          <Image
+            src={imageBg}
+            width={400}
+            height={200}
+            alt={name}
+            loading="lazy"
+            className="object-cover"
+          />
         </div>
-      </PinContainer>
-    </div>
+        <div className="text-base my-4 !p-0 font-normal">
+          <span className="text-slate-400 ">{description}</span>
+          <ul className="flex gap-1 mt-4 flex-wrap">
+            {techStack?.map((skill: string) => (
+              <li
+                key={skill}
+                className="px-2 py-1 text-xs bg-gray-400 rounded-md text-black"
+              >
+                {skill}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </PinContainer>
   );
 };
 export default AnimatedPinDemo;

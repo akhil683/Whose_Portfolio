@@ -10,8 +10,8 @@ const Hero = () => {
         Welcome to Akhil World !
       </h1>
       <p className="max-w-[800px] mb-4 text-center leading-relaxed px-3 text-base  md:text-xl text-[#888]">
-        Enthusiastic and Curious Frontend Web/App Developer. I love building
-        things and travelling !
+        Enthusiastic and Curious Frontend Web/App Developer. I love NeoVim and
+        travelling !
       </p>
       <Button>Contact Me</Button>
       <Particles

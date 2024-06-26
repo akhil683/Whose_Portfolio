@@ -9,5 +9,6 @@ const Skills = [
   "Firebase",
   "Postgres",
   "Appwrite",
+  "React Query",
 ];
 export default Skills;
