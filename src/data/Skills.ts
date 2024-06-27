@@ -1,4 +1,8 @@
-const Skills = [
+interface SkillsType {
+  name: string;
+  url: string;
+}
+const Skills: SkillsType[] = [
   {
     name: "HTML/CSS",
     url: "https://www.w3schools.com/",
@@ -41,7 +45,7 @@ const Skills = [
   },
   {
     name: "React Query",
-    url: "https://tanstack.com/query/v3",
+    url: "https://tanstack.com/query/v ",
   },
 ];
 export default Skills;

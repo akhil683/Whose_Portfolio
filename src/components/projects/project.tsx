@@ -2,6 +2,16 @@ import React from "react";
 import AnimatedPinDemo from "../AnimatedPin";
 import Projects from "@/data/projects";
 
+interface ProjectType {
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+  techStack: string[];
+  github: string;
+  live: string;
+}
+
 const Project = () => {
   console.log(Projects);
   return (
@@ -15,7 +25,7 @@ const Project = () => {
         </h3>
       </div>
       <div className="flex justify-center items-center flex-wrap gap-4 gap-y-20">
-        {Projects?.map((project) => (
+        {Projects?.map((project: ProjectType) => (
           <AnimatedPinDemo key={project?.id} project={project} />
         ))}
       </div>

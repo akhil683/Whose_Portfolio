@@ -23,7 +23,7 @@ const SocialImg = ({ image, link }: any) => {
 const OrbitContact = () => {
   return (
     <div className="relative flex w-screen h-screen items-center justify-center overflow-hidden rounded-lg bg-background">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b bg-clip-text text-center text-8xl font-semibold leading-none text-transparent from-white to-slate-900/10">
+      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b bg-clip-text text-center text-8xl font-semibold leading-none text-transparent from-gray-200 to-slate-900/10">
         Contact Me
       </span>
 

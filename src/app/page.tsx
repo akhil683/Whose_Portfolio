@@ -5,7 +5,7 @@ import Skill from "@/components/Skills";
 import { GetInTouch } from "@/components/GetInTouch";
 import { BorderBeamComp } from "@/components/borderBeam";
 import Email from "@/components/Email";
-import Blogs from "@/components/Blogs";
+import { BlogContainer } from "@/components/Blogs";
 
 export default function Home() {
   return (
@@ -14,9 +14,13 @@ export default function Home() {
       <BorderBeamComp />
       <Project />
       <Skill />
+      <BlogContainer />
       <GetInTouch />
       <Email />
       <OrbitContact />
+      <p className="text-xs text-gray-400 mb-8 text-center">
+        Developed by Akhil Palsra
+      </p>
     </div>
   );
 }

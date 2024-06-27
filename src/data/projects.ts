@@ -1,4 +1,14 @@
-const Projects = [
+interface ProjectType {
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+  techStack: string[];
+  github: string;
+  live: string;
+}
+
+const Projects: ProjectType[] = [
   {
     id: 1,
     name: "Team Hermetica",
