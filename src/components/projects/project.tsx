@@ -1,11 +1,12 @@
 import React from "react";
 import AnimatedPinDemo from "../AnimatedPin";
 import Projects from "@/data/projects";
+import { StaticImageData } from "next/image";
 
 interface ProjectType {
   id: number;
   name: string;
-  image: string;
+  image: StaticImageData;
   description: string;
   techStack: string[];
   github: string;
