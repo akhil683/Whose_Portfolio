@@ -54,8 +54,12 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <CardTitle>{item.name}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
-            <div className="absolute bottom-0 right-0">{item.date}</div>
+            <CardDescription>
+              {item.description.slice(0, 120)}...
+            </CardDescription>
+            <div className="absolute bottom-0 right-0 text-gray-300">
+              {item.date}
+            </div>
           </Card>
         </Link>
       ))}

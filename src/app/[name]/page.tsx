@@ -19,12 +19,12 @@ const BlogPage = () => {
           Back
         </button>
       </Link>
-      <div className="flex max-md:flex-col justify-between text-gray-100 my-4 md:my-8">
-        <h1 className="text-lg md:text-2xl font-semibold">{blog?.name}</h1>
-        <p className="text-gray-400 max-md:text-xs mt-1">{blog?.date}</p>
+      <div className="text-gray-100 my-4 md:my-8">
+        <h1 className="text-xl md:text-3xl font-semibold">{blog?.name}</h1>
+        <p className="text-gray-400 max-md:text-sm mt-2">{blog?.date}</p>
       </div>
       <hr className="bg-gray-600 h-[2px] border-none" />
-      <div className="my-4 md:my-8 text-[18px] text-gray-300">
+      <div className="my-4 md:my-8 text-[16px] md:text-[18px] text-justify text-gray-300">
         <p>
           When I first started coding, Visual Studio Code (VSCode) was my editor
           of choice. It's widely regarded as the industry standard, and I was
