@@ -15,19 +15,19 @@ const Blogs: blogType[] = [
     date: "21 Jun,2023",
     link: "how-i-switch-from-vscode-to-neovim",
   },
-  {
-    id: 2,
-    name: "Optimize data fetching with React Query",
-    description: "Coming soon...",
-    date: "21 Jun,2023",
-    link: "optimize-data-fetching-with-react-query",
-  },
-  {
-    id: 3,
-    name: "My experience of 6 Days trip to Lahaul Spiti",
-    description: "Coming soon...",
-    date: "21 Jun,2023",
-    link: "my-experience-of-6-days-trip-to-lahual-spiti",
-  },
+  // {
+  //   id: 2,
+  //   name: "optimize data fetching with react query",
+  //   description: "coming soon...",
+  //   date: "21 jun,2023",
+  //   link: "optimize-data-fetching-with-react-query",
+  // },
+  // {
+  //   id: 3,
+  //   name: "my experience of 6 days trip to lahaul spiti",
+  //   description: "coming soon...",
+  //   date: "21 jun,2023",
+  //   link: "my-experience-of-6-days-trip-to-lahual-spiti",
+  // },
 ];
 export default Blogs;

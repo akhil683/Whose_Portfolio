@@ -24,7 +24,7 @@ const BlogPage = () => {
         <p className="text-gray-400 max-md:text-sm mt-2">{blog?.date}</p>
       </div>
       <hr className="bg-gray-600 h-[2px] border-none" />
-      <div className="my-4 md:my-8 text-[16px] md:text-[18px] text-justify text-gray-300">
+      <div className="my-4 md:my-8 text-[16px] md:text-[18px] text-gray-300">
         <p>
           When I first started coding, Visual Studio Code (VSCode) was my editor
           of choice. It's widely regarded as the industry standard, and I was
