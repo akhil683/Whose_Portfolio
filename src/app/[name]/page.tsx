@@ -13,12 +13,14 @@ const BlogPage = () => {
   return (
     <article className="lg:w-[800px] max-lg:w-full p-4">
       <Link href="/">Back</Link>
-      <div className="flex justify-between text-gray-100 my-8">
-        <h1 className="text-2xl font-semibold">{blog?.name}</h1>
-        <p className="text-gray-400">{blog?.date}</p>
+      <div className="flex max-md:flex-col justify-between text-gray-100 my-4 md:my-8">
+        <h1 className="text-lg md:text-2xl font-semibold">{blog?.name}</h1>
+        <p className="text-gray-400 max-md:text-sm">{blog?.date}</p>
       </div>
-      <hr className="" />
-      <p className="my-8">{blog?.description}</p>
+      <hr className="bg-gray-600 h-[2px] border-none" />
+      <div>
+        <p className="my-4 md:my-8 max-md:text-sm">{blog?.description}</p>
+      </div>
     </article>
   );
 };

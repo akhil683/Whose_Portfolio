@@ -3,10 +3,9 @@
 import React from "react";
 import { PinContainer } from "./magicUI/3d-pin";
 import Image from "next/image";
-import imageBg from "@/assets/eg.jpg";
 
 const AnimatedPinDemo = ({ project }: any) => {
-  const { name, description, github, techStack } = project;
+  const { name, description, github, image, techStack } = project;
 
   return (
     <PinContainer title={`github/${name}`} href={github}>
@@ -14,9 +13,9 @@ const AnimatedPinDemo = ({ project }: any) => {
         <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-lg text-slate-100">
           {name}
         </h3>
-        <div className="flex overflow-hidden w-full h-96 flex-1 rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500">
+        <div className="flex overflow-hidden w-full h-40 border border-slate-700 rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500">
           <Image
-            src={imageBg}
+            src={image}
             width={400}
             height={200}
             alt={name}

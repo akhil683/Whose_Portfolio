@@ -2,6 +2,7 @@
 
 import Particles from "@/components/magicUI/particle";
 import Button from "@/components/Button";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -11,9 +12,11 @@ const Hero = () => {
       </h1>
       <p className="max-w-[800px] mb-4 text-center leading-relaxed px-3 text-base  md:text-xl text-[#888]">
         Enthusiastic and Curious Frontend Web/App Developer. I love NeoVim and
-        travelling !
+        Travelling !
       </p>
-      <Button>Contact Me</Button>
+      <Link href="/#getintouch">
+        <Button>Contact Me</Button>
+      </Link>
       <Particles
         className="absolute inset-0"
         quantity={200}

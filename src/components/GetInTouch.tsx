@@ -2,7 +2,10 @@ import React from "react";
 
 export const GetInTouch = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-8 mt-32">
+    <section
+      id="getintouch"
+      className="flex flex-col justify-center items-center gap-8 pt-32"
+    >
       <p className="px-4 py-1 bg-[#5D3FD3] rounded-lg">Contact</p>
       <h4 className="text-5xl font-semibold">Get In Touch</h4>
       <p className="max-w-[600px] text-center text-xl text-gray-400 px-6">
@@ -15,6 +18,6 @@ export const GetInTouch = () => {
         </span>{" "}
         and I'll respond whenever I can.
       </p>
-    </div>
+    </section>
   );
 };

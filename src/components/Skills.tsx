@@ -16,7 +16,7 @@ const Skill = () => {
       <ul className="md:px-16 px-8 flex flex-wrap max-w-[1200px] gap-2">
         {Skills?.map((skill: SkillType) => (
           <LinkPreview url={skill.url} key={skill.name}>
-            <li className="md:px-4 px-3 py-1 md:py-2 text-xs md:text-xl bg-gradient-to-b from-white to-gray-400 hover:to-gray-300 cursor-pointer text-black rounded-lg">
+            <li className="md:px-4 px-3 py-1 md:py-2 text-sm md:text-xl bg-gradient-to-b from-white to-gray-400 hover:to-gray-300 cursor-pointer text-black rounded-md">
               <p>{skill.name}</p>
             </li>
           </LinkPreview>
