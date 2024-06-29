@@ -6,6 +6,8 @@ import Blogs from "@/data/blogs";
 import Link from "next/link";
 import Image from "next/image";
 import NeovimImg from "@/assets/HeroImg.png";
+import keymaps1 from "@/assets/blogs/keymap1.png";
+import keymaps2 from "@/assets/blogs/keymap2.png";
 
 const BlogPage = () => {
   const { name } = useParams();
@@ -20,7 +22,7 @@ const BlogPage = () => {
         </button>
       </Link>
       <div className="text-gray-100 my-4 md:my-8">
-        <h1 className="text-xl md:text-3xl font-semibold">{blog?.name}</h1>
+        <h1 className="text-2xl md:text-3xl font-semibold">{blog?.name}</h1>
         <p className="text-gray-400 max-md:text-sm mt-2">{blog?.date}</p>
       </div>
       <hr className="bg-gray-600 h-[2px] border-none" />
@@ -36,14 +38,9 @@ const BlogPage = () => {
           relying heavily on the mouse for various tasks within VSCode, which I
           realized later was holding me back from reaching my full potential.
         </p>
-        <h3 className="my-4 md:my-8 font-semibold md:text-2xl text-lg text-white">
+        <h3 className="my-4 md:my-8 font-semibold md:text-2xl text-xl text-white">
           Discovering Neovim
         </h3>
-        <Image
-          src={NeovimImg}
-          className="w-full border border-slate-600 rounded-lg mb-4"
-          alt="Neovim"
-        />
         <p>
           One day, while browsing YouTube, I stumbled upon a channel called{" "}
           <a
@@ -61,7 +58,12 @@ const BlogPage = () => {
           impressed. Motivated by what I saw, I decided to make the switch to
           Neovim.
         </p>
-        <h3 className="my-4 md:my-8 font-semibold md:text-2xl text-lg text-white">
+        <Image
+          src={NeovimImg}
+          className="w-full border border-slate-600 rounded-lg my-4"
+          alt="Neovim"
+        />
+        <h3 className="my-4 md:my-8 font-semibold md:text-2xl text-xl text-white">
           First Attempt: Big Mistake
         </h3>
         <p>
@@ -75,6 +77,9 @@ const BlogPage = () => {
           speed and efficiency.
         </p>
         <br />
+        <h3 className="my-4 md:my-8 font-semibold md:text-2xl text-xl text-white">
+          Vim Motion in VSCode
+        </h3>
         <p>
           As a relatively new coder, I was not understanding him but still
           continueed to watch his video becaused I was always impressed by his
@@ -86,7 +91,7 @@ const BlogPage = () => {
           almost everything, I noticed a decline in performance. The lag became
           unbearable, prompting me to reconsider switching to Neovim.
         </p>
-        <h3 className="my-4 md:my-8 font-semibold md:text-2xl text-lg text-white">
+        <h3 className="my-4 md:my-8 font-semibold md:text-2xl text-xl text-white">
           Successful Transition and Configuration
         </h3>
         <p>
@@ -107,8 +112,8 @@ const BlogPage = () => {
           used to lag in VSCode, were now seamless in Neovim. I may not be as
           fast as ThePrimeAgen, but I'm blazing through my work at my own pace.
         </p>
-        <h3 className="my-4 md:my-8 font-semibold md:text-2xl text-lg text-white">
-          Enhancing Workflow with Harpoon and Tmux
+        <h3 className="my-4 md:my-8 font-semibold md:text-2xl text-xl text-white">
+          Enhancing Workflow with Harpoon and Telescope
         </h3>
         <p>
           To further enhance my workflow, I installed {""}
@@ -128,24 +133,38 @@ const BlogPage = () => {
             Telescope
           </a>{" "}
           is a fantastic fuzzy finder, I found Harpoon invaluable for focusing
-          on a few files at a time. With Harpoon, I could quickly switch between
-          core files, boosting my productivity. Additionally, I integrated {""}
-          <a
-            className="font-semibold underline underline-offset-4 decoration-gray-400"
-            href="https://github.com/aserowy/tmux.nvim"
-            target="_blank"
-          >
-            Tmux,
-          </a>{" "}
-          a terminal multiplexer, into my setup. tmux allows me to switch easily
-          between several programs within a single terminal, enabling me to
-          manage multiple projects effortlessly. This combination of tools has
-          significantly streamlined my workflow.
+          on a few files at a time. Harpoon also support tmux out of the box
+          which is a terminal multiplexer. But I use windows, so I can't use
+          tmux. With Harpoon, I can mark files that I want to re-visit later and
+          quickly switch between those frequently used files, boosting my
+          productivity. The combination of tools has significantly streamlined
+          my workflow.
         </p>
-        <br />
+        <h3 className="my-4 md:my-8 font-semibold md:text-2xl text-xl text-white">
+          Conclusion
+        </h3>
         <p>
-          Thank you for reading about my journey from VSCode to Neovim, and let
-          me know if you enjoyed this post !
+          Now, having used Neovim extensively, I can't imagine going back to
+          VSCode. Neovim's performance is buttery smooth, and it has
+          fundamentally changed how I interact with my laptop. I rely almost
+          entirely on the keyboard, rarely touching the mouse. I've also
+          customized Neovim with various extensions and Language Server
+          Protocols (LSP) to fit my coding needs perfectly. I may not be as fast
+          as ThePrimeAgen, but I'm blazing through my work at my own pace. You
+          can check out my keymaps below -
+        </p>
+        <Image
+          src={keymaps1}
+          className="w-full border border-slate-600 rounded-lg my-4"
+          alt="Neovim"
+        />
+        <Image
+          src={keymaps2}
+          className="w-full border border-slate-600 rounded-lg my-4"
+          alt="Neovim"
+        />
+        <p className="mt-4">
+          Thank you for reading and let me know if you enjoyed this post !
         </p>
       </div>
     </article>
