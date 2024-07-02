@@ -5,22 +5,24 @@ import React from "react";
 import Blogs from "@/data/blogs";
 import Link from "next/link";
 import Image from "next/image";
-import NeovimImg from "@/assets/HeroImg.png";
+import NeovimImg from "@/assets/blogs/neovim.png";
 import keymaps1 from "@/assets/blogs/keymap1.png";
 import keymaps2 from "@/assets/blogs/keymap2.png";
+import { useRouter } from "next/navigation";
 
 const BlogPage = () => {
+  const router = useRouter();
   const { name } = useParams();
-  console.log(name);
   const blog = Blogs?.find((blog) => blog.link == name);
-  console.log(blog);
+
   return (
-    <article className="lg:w-[700px] max-lg:w-full p-4">
-      <Link href="/">
-        <button className="px-4 py-1 rounded-full hover:px-6 duration-200 text-black bg-gray-400 hover:bg-gray-200">
-          Back
-        </button>
-      </Link>
+    <article className="lg:w-[700px] max-lg:w-full p-4 mt-12">
+      <button
+        onClick={() => router.back()}
+        className="px-4 py-1 rounded-full hover:px-6 duration-200 text-black bg-gray-400 hover:bg-gray-200"
+      >
+        Back
+      </button>
       <div className="text-gray-100 my-4 md:my-8">
         <h1 className="text-2xl md:text-3xl font-semibold">{blog?.name}</h1>
         <p className="text-gray-400 max-md:text-sm mt-2">{blog?.date}</p>

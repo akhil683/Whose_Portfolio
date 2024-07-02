@@ -10,6 +10,9 @@ html {
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   color: rgb(var(--foreground-rgb));
