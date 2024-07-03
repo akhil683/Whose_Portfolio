@@ -9,13 +9,7 @@ export const HoverEffect = ({
   items,
   className,
 }: {
-  items: {
-    id: number;
-    name: string;
-    description: string;
-    date: string;
-    link: string;
-  }[];
+  items: BlogPost[];
   className?: string;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -29,7 +23,7 @@ export const HoverEffect = ({
     >
       {items.map((item, idx) => (
         <Link
-          href={item?.link}
+          href={`/blogs/${item?.link}`}
           key={item?.link}
           className="relative group  block p-2 h-full w-full"
           prefetch={true}
@@ -54,10 +48,8 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
-            <CardTitle>{item.name}</CardTitle>
-            <CardDescription>
-              {item.description.slice(0, 120)}...
-            </CardDescription>
+            <CardTitle>{item.title}</CardTitle>
+            <CardDescription>{item.description}</CardDescription>
             <div className="absolute bottom-0 right-0 text-gray-300">
               {item.date}
             </div>
