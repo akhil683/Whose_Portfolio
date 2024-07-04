@@ -21,7 +21,7 @@ const Project = () => {
         <p className="px-4 py-2 text-sm bg-[#5D3FD3] text-white rounded-lg">
           Projects
         </p>
-        <h3 className="text-5xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400">
+        <h3 className="text-4xl md:text-5xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400">
           Checkout my Latest Work !
         </h3>
       </div>

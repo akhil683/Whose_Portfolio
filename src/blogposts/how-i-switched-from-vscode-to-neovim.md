@@ -1,14 +1,13 @@
 ---
 id: 1,
-title: "How I Switched from VSCode to Neovim ?"
+title: "How I Switched from VS Code to Neovim ?"
 description: "I will share my experience of switching from VSCode to Neovim."
 link: "how-i-switched-from-vscode-to-neovim"
-date: "2023-03-14"
+date: "21 Jun, 2024"
 ---
 
 ![Neovim Setup](https://raw.githubusercontent.com/akhil683/Whose_Portfolio/main/src/assets/blogs/neovim.png)
-When I first started coding, **Visual Studio Code (VSCode)** was my editor
-of choice. It's widely regarded as the industry standard, and I was
+When I first started coding, **Visual Studio Code (VSCode)** was my editor of choice. It's widely regarded as the industry standard, and I was
 more than satisfied with its performance, especially on my new laptop.
 I didn’t feel it lacked anything crucial, and its speed was adequate
 for my needs. At that time, my focus was on improving my typing speed,
@@ -57,7 +56,7 @@ unbearable, prompting me to reconsider switching to Neovim.
 After so many unsuccessfull attempts, this time transition was
 smoother. After switching to **Clang/LLVM** as my C compiler, Neovim
 installed without any issues. I opted for
-]LazyVim](https://www.lazyvim.github.io)
+[LazyVim](https://www.lazyvim.github.io)
 to avoid the _time-consuming_ task of writing my configuration from
 scratch. Then, I customized it with keymaps to suit my needs. Within a
 few days, I experienced a level of speed and efficiency that I had
@@ -67,6 +66,7 @@ fast as _ThePrimeAgen_, but I'm blazing through my work at my own pace.
 
 ### Enhancing Workflow with Harpoon and Telescope
 
+![Telescope View](../assets/blogs/telescope.png)
 To further enhance my workflow, I installed [Harpoon](https://www.github.com/primeagen/harpoon). While
 [Telescope](https://github.com) is a fantastic fuzzy finder, I found Harpoon invaluable for focusing
 on a few files at a time. **Harpoon** also support **tmux** out of the box

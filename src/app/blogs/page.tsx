@@ -1,4 +1,3 @@
-import getFormattedDate from "@/lib/getFormattedDate";
 import { getSortedPostsData } from "@/lib/posts";
 import Link from "next/link";
 import React from "react";
@@ -13,7 +12,6 @@ const Blogs = () => {
         </h1>
         <div className=" flex flex-col justify-center gap-2">
           {posts.map((post) => {
-            const pubDate = getFormattedDate(post.date);
             return (
               <Link
                 href={`/blogs/${post.link}`}
@@ -24,7 +22,7 @@ const Blogs = () => {
                 <p className="text-[#999] my-1 leading-tight">
                   {post.description}
                 </p>
-                <p className="text-sm text-[#999] font-bold">{pubDate}</p>
+                <p className="text-sm text-[#999] font-bold">{post.date}</p>
               </Link>
             );
           })}

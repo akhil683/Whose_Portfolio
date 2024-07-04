@@ -2,7 +2,7 @@ import { getPostData, getSortedPostsData } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import getFormattedDate from "@/lib/getFormattedDate";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import OrbitContact from "@/components/OrbitContact";
 
 export const generateMetadata = ({
   params,
@@ -32,7 +32,6 @@ const Post = async ({ params }: { params: { postId: string } }) => {
   }
 
   const { title, date, contentHtml } = await getPostData(postId);
-  const pubDate = getFormattedDate(date);
 
   return (
     <main className="px-6 bg-gradient-radial from-black to-[#111]  pt-12">
@@ -45,13 +44,14 @@ const Post = async ({ params }: { params: { postId: string } }) => {
         </Link>
         <div className="text-gray-100 my-4 md:my-8">
           <h1 className="text-2xl md:text-3xl font-semibold">{title}</h1>
-          <p className="text-gray-400 max-md:text-sm mt-2">{pubDate}</p>
+          <p className="text-gray-400 max-md:text-sm mt-2">{date}</p>
         </div>
         <hr className="bg-gray-600 h-[2px] border-none" />
-        <article id="blogContent" className="prose prose-invert">
+        <article id="blogContent" className="prose prose-invert max-w-[700px]">
           <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
         </article>
       </div>
+      <OrbitContact />
     </main>
   );
 };
