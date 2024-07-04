@@ -66,7 +66,7 @@ fast as _ThePrimeAgen_, but I'm blazing through my work at my own pace.
 
 ### Enhancing Workflow with Harpoon and Telescope
 
-![Telescope View](../assets/blogs/telescope.png)
+![Telescope View](https://raw.githubusercontent.com/akhil683/Whose_Portfolio/main/src/assets/blogs/telescope.png)
 To further enhance my workflow, I installed [Harpoon](https://www.github.com/primeagen/harpoon). While
 [Telescope](https://github.com) is a fantastic fuzzy finder, I found Harpoon invaluable for focusing
 on a few files at a time. **Harpoon** also support **tmux** out of the box

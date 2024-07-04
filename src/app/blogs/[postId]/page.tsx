@@ -1,6 +1,5 @@
 import { getPostData, getSortedPostsData } from "@/lib/posts";
 import { notFound } from "next/navigation";
-import getFormattedDate from "@/lib/getFormattedDate";
 import Link from "next/link";
 import OrbitContact from "@/components/OrbitContact";
 

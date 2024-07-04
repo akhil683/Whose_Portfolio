@@ -17,7 +17,6 @@ export default function Home() {
       <BlogContainer />
       <GetInTouch />
       <Email />
-      <OrbitContact />
       <p className="text-xs text-gray-400 mb-8 text-center">
         Developed by Akhil Palsra
       </p>
