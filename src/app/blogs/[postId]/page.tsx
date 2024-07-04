@@ -50,7 +50,6 @@ const Post = async ({ params }: { params: { postId: string } }) => {
           <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
         </article>
       </div>
-      <OrbitContact />
     </main>
   );
 };
