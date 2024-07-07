@@ -1,9 +1,6 @@
-"use client";
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export const PinContainer = ({
   children,
@@ -51,7 +48,7 @@ export const PinContainer = ({
           style={{
             transform: transform,
           }}
-          className="absolute left-1/2 p-4 top-1/2  flex justify-start items-start rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-[#111] border border-white/[0.3] group-hover/pin:border-white/[0.2] transition duration-500 overflow-hidden"
+          className="absolute left-1/2 p-4 bg-transparent hover:bg-[#111]/60 top-1/2  flex justify-start items-start rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.3] group-hover/pin:border-white/[0.2] transition duration-500 overflow-hidden"
         >
           <div className={cn(" relative z-50 h-[400px]", className)}>
             {children}

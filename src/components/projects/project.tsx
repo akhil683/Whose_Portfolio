@@ -19,7 +19,7 @@ const Project = () => {
     <section className="relative">
       <div className="flex flex-col justify-center items-center gap-8 mb-16">
         <p className="px-4 py-2 text-sm bg-[#5D3FD3] text-white rounded-lg">
-          Projects
+          {`<Projects />`}
         </p>
         <h3 className="text-4xl md:text-5xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400">
           Checkout my Latest Work !

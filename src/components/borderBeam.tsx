@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import { BorderBeam } from "./magicUI/border-beam";
 import heroImg from "@/assets/HeroImg.png";
 
@@ -9,13 +10,13 @@ export function BorderBeamComp() {
         <Image
           src={heroImg}
           alt="Hero Image"
-          className="hidden max-w-[90vw] rounded-[inherit] border-2 object-contain shadow-lg dark:block"
+          className="max-w-[90vw] rounded-[inherit] border-2 object-contain shadow-lg"
         />
-        <Image
-          src={heroImg}
-          alt="Hero Image"
-          className="block max-w-[90vw] rounded-[inherit] border-2 object-contain shadow-lg dark:hidden"
-        />
+        {/* <Image */}
+        {/*   src={heroImg} */}
+        {/*   alt="Hero Image" */}
+        {/*   className="block max-w-[90vw] rounded-[inherit] border-2 object-contain shadow-lg dark:hidden" */}
+        {/* /> */}
 
         <BorderBeam size={250} duration={8} delay={9} />
       </div>

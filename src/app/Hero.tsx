@@ -1,5 +1,3 @@
-"use client";
-
 import Particles from "@/components/magicUI/particle";
 import Button from "@/components/Button";
 import Link from "next/link";

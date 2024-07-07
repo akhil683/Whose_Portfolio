@@ -1,7 +1,7 @@
 ---
 id: 1,
 title: "How I Switched from VS Code to Neovim ?"
-description: "I will share my experience of switching from VSCode to Neovim."
+description: "In this blog post, I will share my experience of switching from VSCode to Neovim."
 link: "how-i-switched-from-vscode-to-neovim"
 date: "21 Jun, 2024"
 ---

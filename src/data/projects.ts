@@ -3,7 +3,6 @@ import nikeImg from "@/assets/projects/nike.png";
 import doctorImg from "@/assets/projects/doctor.png";
 import portfolioImg from "@/assets/projects/portfolio.png";
 import adventureImg from "@/assets/projects/adventureVault.png";
-import React from "react";
 import { StaticImageData } from "next/image";
 
 interface ProjectType {

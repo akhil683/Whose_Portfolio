@@ -1,7 +1,13 @@
 import { getPostData, getSortedPostsData } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import OrbitContact from "@/components/OrbitContact";
+
+export function generateStaticParams() {
+  const posts = getSortedPostsData();
+  return posts.map((post) => ({
+    postId: post.id,
+  }));
+}
 
 export const generateMetadata = ({
   params,
