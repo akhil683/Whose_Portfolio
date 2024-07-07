@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import FramerUp from "../framer/FramerUp";
+import { BlogPost } from "../../../type";
 
 export const HoverEffect = ({
   items,
