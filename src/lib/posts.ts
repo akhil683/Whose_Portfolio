@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import remarkHtml from "remark-html";
 import { remark } from "remark";
+import { BlogPost } from "../../type";
 
 const postsDirectory = path.join(process.cwd(), "src/blogposts");
 
