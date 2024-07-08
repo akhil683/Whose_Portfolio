@@ -13,3 +13,9 @@ type songType = {
   audio: string;
   img: StaticImageData;
 };
+type ArtistType = {
+  id: number;
+  name: string;
+  img: string;
+  link: string;
+};

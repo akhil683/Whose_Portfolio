@@ -3,6 +3,8 @@ import Link from "next/link";
 import React, { Suspense } from "react";
 import { Metadata } from "next";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Akhil's Blogs",
   description: "In these blog posts, I share my experiences !",
@@ -11,14 +13,12 @@ export const metadata: Metadata = {
 const Blogs = () => {
   const posts = getSortedPostsData();
   return (
-    <main className="bg-gradient-radial from-black to-[#111] min-h-screen px-4 flex flex-col pt-16 items-center">
+    <main className="bg-gradient-radial from-black to-[#111] min-h-screen px-4 flex flex-col pt-16 md:items-center">
       <div className="max-w-[600px]">
         <h1 className="text-2xl mb-12 hover:no-underline underline underline-offset-8 decoration-[#999]">
           blogs
         </h1>
-        <Suspense
-          fallback={<h1 className="text-center text-gray-300">Loading...</h1>}
-        >
+        <Suspense fallback={<h1 className="text-gray-300">Loading...</h1>}>
           <div className=" flex flex-col justify-center gap-2">
             {posts?.map((post) => {
               return (

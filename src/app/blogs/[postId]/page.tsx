@@ -1,6 +1,7 @@
 import { getPostData, getSortedPostsData } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export function generateStaticParams() {
   const posts = getSortedPostsData();
@@ -47,14 +48,19 @@ const Post = async ({ params }: { params: { postId: string } }) => {
         >
           Back
         </Link>
-        <div className="text-gray-100 my-4 md:my-8">
-          <h1 className="text-2xl md:text-3xl font-semibold">{title}</h1>
-          <p className="text-gray-400 max-md:text-sm mt-2">{date}</p>
-        </div>
-        <hr className="bg-gray-600 h-[2px] border-none" />
-        <article id="blogContent" className="prose prose-invert max-w-[700px]">
-          <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
-        </article>
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <div className="text-gray-100 my-4 md:my-8">
+            <h1 className="text-2xl md:text-3xl font-semibold">{title}</h1>
+            <p className="text-gray-400 max-md:text-sm mt-2">{date}</p>
+          </div>
+          <hr className="bg-gray-600 h-[2px] border-none" />
+          <article
+            id="blogContent"
+            className="prose prose-invert max-w-[700px]"
+          >
+            <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
+          </article>
+        </Suspense>
       </div>
     </main>
   );

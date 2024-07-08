@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+
 interface AudioPlayerProps {
   src: string;
   play: boolean;
@@ -34,10 +35,7 @@ const AudioPlayer = ({ src, play, onFinish }: AudioPlayerProps) => {
         className="hidden"
         onEnded={handleAudioEnded}
         src={src}
-      >
-        {/* <source src={src} type="audio/mp3" /> */}
-        {/* Your browser does not support the audio element. */}
-      </audio>
+      ></audio>
     </div>
   );
 };
