@@ -9,15 +9,16 @@ const Hero = () => {
         Welcome to Akhil World !
       </h1>
       <p className="max-w-[800px] mb-4 text-center leading-relaxed px-3 text-base  md:text-xl text-[#888]">
-        Enthusiastic and Curious Frontend Web/App Developer. I love NeoVim and
-        Travelling !
+        Hi, My name is Akhil. I love NeoVim and
+        Travelling. <br />Wanna talk to a man from AndromedA GalaxY ?
       </p>
-      <Link href="/#getintouch">
+      <Link href="/#getintouch" className="flex flex-col justify-center items-center">
+        <p className="mb-4 text-center px-16 md:text-lg text-sm text-[#888]"></p>
         <Button>Contact Me</Button>
       </Link>
       <Particles
         className="absolute inset-0"
-        quantity={200}
+        quantity={400}
         ease={80}
         color={"#ffffff"}
         refresh

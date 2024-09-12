@@ -1,17 +1,18 @@
-import { getSortedPostsData } from "@/lib/posts";
+import { getPostsMeta } from "@/lib/posts";
 import Link from "next/link";
 import React, { Suspense } from "react";
 import { Metadata } from "next";
 
-export const revalidate = 3600;
+// export const revalidate = 1000;
 
 export const metadata: Metadata = {
   title: "Akhil's Blogs",
   description: "In these blog posts, I share my experiences !",
 };
 
-const Blogs = () => {
-  const posts = getSortedPostsData();
+const Blogs = async () => {
+  const posts = await getPostsMeta();
+
   return (
     <main className="bg-gradient-radial from-black to-[#111] min-h-screen px-4 flex flex-col pt-16 md:items-center">
       <div className="max-w-[600px]">

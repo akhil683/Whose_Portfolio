@@ -1,59 +1,78 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import remarkHtml from "remark-html";
-import { remark } from "remark";
-import { BlogPost } from "../../type";
+import { BlogPost, Meta } from "../../type"
+import { compileMDX } from "next-mdx-remote/rsc"
+import rehypeHighlight from "rehype-highlight"
+import rehypeSlug from "rehype-slug"
+import rehypeAutolinkHeadings from "rehype-autolink-headings"
 
-const postsDirectory = path.join(process.cwd(), "src/blogposts");
-
-export function getSortedPostsData() {
-  //Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
-    //Remove '.md' from file name to get id
-    const id = fileName.replace(/\.md$/, "");
-
-    //Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-
-    //User gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
-    const blogPost: BlogPost = {
-      id,
-      title: matterResult.data.title,
-      description: matterResult.data.description,
-      link: matterResult.data.link,
-      date: matterResult.data.date,
-    };
-    return blogPost;
-  });
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
+type Filetree = {
+  'tree': [
+    {
+      'path': string,
+    }
+  ]
 }
 
-export async function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
+export async function getPostByName(fileName: string): Promise<BlogPost | undefined> {
+  console.log("hello")
+  const res = await fetch(`https://raw.githubusercontent.com/akhil683/Portfolio_Blogs/main/${fileName}`, {
+    headers: {
+      Accept: 'application/vnd.github+json',
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+      'X-GitHub-Api-Version': '2022-11-28',
+    }
+  })
+  console.log('res  -->', res)
+  if (!res.ok) return undefined
 
-  // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents);
+  const rawMDX = await res.text()
+  if (rawMDX === "404: Not Found") return undefined
 
-  const processedContent = await remark()
-    .use(remarkHtml)
-    .process(matterResult.content);
+  const { frontmatter, content } = await compileMDX<{
+    title: string,
+    date: string,
+    tag: string,
+    description: string,
+    link: string
+  }>({
+    source: rawMDX,
+    options: {
+      parseFrontmatter: true,
+      mdxOptions: {
+        rehypePlugins: [
+          rehypeHighlight,
+          rehypeSlug,
+          [rehypeAutolinkHeadings, {
+            behavior: 'wrap',
+          }]
+        ]
+      }
+    }
+  })
 
-  const contentHtml = processedContent.toString();
+  const id = fileName.replace(/\.mdx$/, "")
+  const blogPostObj: BlogPost = { meta: { id, title: frontmatter.title, date: frontmatter.date, tag: frontmatter.tag, link: frontmatter.link, description: frontmatter.description }, content }
+  return blogPostObj
+}
 
-  const blogPostWithHTML: BlogPost & { contentHtml: string } = {
-    id,
-    title: matterResult.data.title,
-    description: matterResult.data.description,
-    link: matterResult.data.link,
-    date: matterResult.data.date,
-    contentHtml,
-  };
+export async function getPostsMeta(): Promise<Meta[] | undefined> {
+  const res = await fetch('https://api.github.com/repos/akhil683/Portfolio_Blogs/git/trees/main?recursive=1', {
+    headers: {
+      Accept: 'application/vnd.github+json',
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+      'X-GitHub-Api-Version': '2022-11-28',
+    }
+  })
+  if (!res.ok) return undefined
+  const repoFiletree: Filetree = await res.json()
+  const filesArray = repoFiletree.tree.map(obj => obj.path).filter(path => path.endsWith('.mdx'))
+  const posts: Meta[] = []
 
-  // Combine the data with the id
-  return blogPostWithHTML;
+  for (const file of filesArray) {
+    const post = await getPostByName(file)
+    if (post) {
+      const { meta } = post
+      posts.push(meta)
+    }
+  }
+  return posts.sort((a, b) => a.date < b.date ? 1 : -1)
 }

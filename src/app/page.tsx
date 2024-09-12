@@ -5,9 +5,9 @@ import Skill from "@/components/Skills";
 import { GetInTouch } from "@/components/GetInTouch";
 import { BorderBeamComp } from "@/components/borderBeam";
 import Email from "@/components/Email";
-import { BlogContainer } from "@/components/Blogs";
+import BlogContainer from "@/components/Blogs";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="overflow-hidden">
       <Hero />

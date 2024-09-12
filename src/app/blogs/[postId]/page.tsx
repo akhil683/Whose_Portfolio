@@ -1,66 +1,71 @@
-import { getPostData, getSortedPostsData } from "@/lib/posts";
+import { getPostsMeta, getPostByName } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Suspense } from "react";
+import "highlight.js/styles/base16/windows-nt.css"
 
-export function generateStaticParams() {
-  const posts = getSortedPostsData();
+export const revalidate = 86400
+
+type Props = {
+  params: {
+    postId: string,
+  }
+}
+export async function generateStaticParams() {
+  const posts = await getPostsMeta();
+  if (!posts) return []
+
   return posts.map((post) => ({
     postId: post.id,
   }));
 }
 
-export const generateMetadata = ({
-  params,
-}: {
-  params: { postId: string };
-}) => {
-  const posts = getSortedPostsData();
-  const { postId } = params;
-
-  const post = posts.find((post) => post.link === postId);
+export const generateMetadata = async ({
+  params: { postId },
+}: Props) => {
+  const post = await getPostByName(`${postId}.mdx`);
   if (!post) {
     return {
       title: "Post Not Found",
     };
   }
   return {
-    title: post?.title,
+    title: post.meta.title,
   };
 };
 
-const Post = async ({ params }: { params: { postId: string } }) => {
-  const posts = getSortedPostsData();
-  const { postId } = params;
+const Post = async ({ params: { postId } }: Props) => {
+  const post = await getPostByName(`${postId}.mdx`)
 
-  if (!posts.find((post) => post.link === postId)) {
-    return notFound();
-  }
+  if (!post) notFound()
 
-  const { title, date, contentHtml } = await getPostData(postId);
+  const { meta, content } = post
 
   return (
-    <main className="px-6 bg-gradient-radial from-black to-[#111]  pt-12">
+    <main className="px-6 bg-gradient-radial from-black via-back to-[#111] py-12">
       <div className="max-w-[700px] mx-auto">
         <Link
           href="/"
-          className="px-4 py-1 rounded-full no-underline hover:px-6 duration-200 text-black bg-gray-400 hover:bg-gray-200"
+          className="px-4 py-1 rounded-full no-underline hover:px-6 duration-200 text-black bg-gray-300 hover:bg-gray-100"
         >
           Back
         </Link>
         <Suspense fallback={<h1>Loading...</h1>}>
           <div className="text-gray-100 my-4 md:my-8">
-            <h1 className="text-2xl md:text-3xl font-semibold">{title}</h1>
-            <p className="text-gray-400 max-md:text-sm mt-2">{date}</p>
+            <h1 className="text-2xl md:text-3xl font-semibold">{meta.title}</h1>
+            <p className="text-gray-400 max-md:text-sm mt-2">{meta.date}</p>
           </div>
+          <p>{meta.tag}</p>
           <hr className="bg-gray-600 h-[2px] border-none" />
           <article
             id="blogContent"
             className="prose prose-invert max-w-[700px]"
           >
-            <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
+            {content}
           </article>
         </Suspense>
+        <hr className="bg-gray-600 h-[2px] my-6 border-none" />
+        <span>By Akhil Palsra</span>
       </div>
     </main>
   );

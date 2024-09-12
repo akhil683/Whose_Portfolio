@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef } from "react";
 
-import populargirlAudio from "@/assets/songs/popular_girl.mp3";
+import populargirlAudio from "@/assets/songs/dil_mere.mp3";
 
 const PlaySong = () => {
   const audioRef = useRef<HTMLAudioElement>(null);

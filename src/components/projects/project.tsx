@@ -14,7 +14,6 @@ interface ProjectType {
 }
 
 const Project = () => {
-  console.log(Projects);
   return (
     <section className="relative">
       <div className="flex flex-col justify-center items-center gap-8 mb-16">

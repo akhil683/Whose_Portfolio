@@ -1,8 +1,11 @@
-import { getSortedPostsData } from "@/lib/posts";
+import { getPostsMeta, } from "@/lib/posts";
 import { HoverEffect } from "./magicUI/BlogHover";
 
-export function BlogContainer() {
-  const posts = getSortedPostsData();
+export const revalidate = 1000;
+
+const BlogContainer = async () => {
+  const posts = await getPostsMeta();
+
   return (
     <div className="max-w-5xl mx-auto px-8 flex flex-col justify-center items-center gap-8">
       <p className="px-4 py-1 bg-[#5D3FD3] rounded-lg">{`<Blogs />`}</p>
@@ -12,4 +15,9 @@ export function BlogContainer() {
       <HoverEffect items={posts} />
     </div>
   );
-}
+};
+
+export default BlogContainer
+
+
+

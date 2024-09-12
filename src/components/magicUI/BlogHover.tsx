@@ -5,13 +5,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import FramerUp from "../framer/FramerUp";
-import { BlogPost } from "../../../type";
+import { BlogPost, Meta } from "../../../type";
 
 export const HoverEffect = ({
   items,
   className,
 }: {
-  items: BlogPost[];
+  items: Meta[] | undefined;
   className?: string;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -20,15 +20,15 @@ export const HoverEffect = ({
     <FramerUp>
       <div
         className={cn(
-          "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
+          "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 py-10",
           className,
         )}
       >
-        {items.map((item, idx) => (
+        {items?.map((item, idx) => (
           <Link
             href={`/blogs/${item?.link}`}
             key={item?.link}
-            className="relative group  block p-2 h-full w-full"
+            className="relative group mx-auto block p-2 h-full w-full"
             prefetch={true}
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
