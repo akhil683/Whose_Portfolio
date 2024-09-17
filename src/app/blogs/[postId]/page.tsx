@@ -50,20 +50,18 @@ const Post = async ({ params: { postId } }: Props) => {
         >
           Back
         </Link>
-        <Suspense fallback={<h1>Loading...</h1>}>
-          <div className="text-gray-100 my-4 md:my-8">
-            <h1 className="text-2xl md:text-3xl font-semibold">{meta.title}</h1>
-            <p className="text-gray-400 max-md:text-sm mt-2">{meta.date}</p>
-          </div>
-          <p>{meta.tag}</p>
-          <hr className="bg-gray-600 h-[2px] border-none" />
-          <article
-            id="blogContent"
-            className="prose prose-invert max-w-[700px]"
-          >
-            {content}
-          </article>
-        </Suspense>
+        <div className="text-gray-100 my-4 md:my-8">
+          <h1 className="text-2xl md:text-3xl font-semibold">{meta.title}</h1>
+          <p className="text-gray-400 max-md:text-sm mt-2">{meta.date}</p>
+        </div>
+        <p>{meta.tag}</p>
+        <hr className="bg-gray-600 h-[2px] border-none" />
+        <article
+          id="blogContent"
+          className="prose prose-invert max-w-[700px]"
+        >
+          {content}
+        </article>
         <hr className="bg-gray-600 h-[2px] my-6 border-none" />
         <span>By Akhil Palsra</span>
       </div>
