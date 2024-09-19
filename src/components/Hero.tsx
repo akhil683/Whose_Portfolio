@@ -1,3 +1,4 @@
+
 import Particles from "@/components/magicUI/particle";
 import Button from "@/components/Button";
 import Link from "next/link";
@@ -9,7 +10,7 @@ const Hero = () => {
         Welcome to Akhil World !
       </h1>
       <p className="max-w-[800px] mb-4 text-center leading-relaxed px-3 text-base  md:text-xl text-[#888]">
-        Hi, My name is Akhil. I love NeoVim and
+        I love NeoVim and
         Travelling. <br />Wanna talk to a man from AndromedA GalaxY ?
       </p>
       <Link href="/#getintouch" className="flex flex-col justify-center items-center">

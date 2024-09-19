@@ -1,5 +1,5 @@
 import OrbitContact from "@/components/OrbitContact";
-import Hero from "./Hero";
+import Hero from "@/components/Hero";
 import Project from "@/components/projects/project";
 import Skill from "@/components/Skills";
 import { GetInTouch } from "@/components/GetInTouch";
@@ -9,7 +9,7 @@ import BlogContainer from "@/components/Blogs";
 
 export default async function Home() {
   return (
-    <div className="overflow-hidden">
+    <div>
       <Hero />
       <BorderBeamComp />
       <Project />

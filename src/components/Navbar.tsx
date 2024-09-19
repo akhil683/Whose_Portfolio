@@ -7,7 +7,7 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const MenuPosition = showMenu ? "left-0" : "-left-[100%]";
   return (
-    <nav className="absolute right-0 top-0 p-4 md:px-8 z-50 text-gray-400">
+    <nav className="fixed right-0 top-0 p-4 md:px-8 z-[9999] text-gray-400">
       <div className="flex gap-4 max-md:hidden">
         <Link href="/">
           <button className="underline-offset-4 p-2 hover:text-white duration-200">
@@ -20,7 +20,7 @@ const Navbar = () => {
           </button>
         </Link>
         <a
-          href="https://drive.google.com/file/d/1LX2kXSnaRFbYiZsKqrp4u0VlpVxQbJWx/view"
+          href="https://drive.google.com/drive/u/0/folders/18Fb2_6nbW9dFij1l5mw8JPO936P5oZCO"
           target="_blank"
         >
           <button className="underline-offset-4 p-2 hover:text-white duration-200">
@@ -65,7 +65,7 @@ const Navbar = () => {
               Music
             </Link>
             <a
-              href="https://drive.google.com/file/d/1LX2kXSnaRFbYiZsKqrp4u0VlpVxQbJWx/view"
+              href="https://drive.google.com/drive/u/0/folders/18Fb2_6nbW9dFij1l5mw8JPO936P5oZCO"
               target="_blank"
             >
               <button className="py-2">Resume</button>

@@ -1,10 +1,9 @@
 import { getPostsMeta, getPostByName } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Suspense } from "react";
-import "highlight.js/styles/base16/windows-nt.css"
+import "highlight.js/styles/github-dark.css"
 
-export const revalidate = 86400
+export const revalidate = 3000
 
 type Props = {
   params: {
@@ -31,6 +30,7 @@ export const generateMetadata = async ({
   }
   return {
     title: post.meta.title,
+    description: post.meta.description,
   };
 };
 

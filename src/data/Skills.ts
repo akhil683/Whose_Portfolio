@@ -47,5 +47,13 @@ const Skills: SkillsType[] = [
     name: "React Query",
     url: "https://tanstack.com/query/v ",
   },
+  {
+    name: "MongoDB",
+    url: "",
+  },
+  {
+    name: "Lua",
+    url: "",
+  },
 ];
 export default Skills;
