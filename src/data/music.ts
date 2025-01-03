@@ -3,6 +3,7 @@ import magicshop from "@/assets/songs/images/magic_shopp.jpg";
 import tutapull from "@/assets/songs/images/tuta_pull_wahan.jpg";
 import populargirl from "@/assets/songs/images/popular_girl.jpeg";
 import dilmere from "@/assets/songs/images/dil_mere.png";
+import euphoria from "@/assets/songs/images/euphoria.png"
 
 import likeyouAudio from "@/assets/songs/like_you.mp3";
 import magicshopAudio from "@/assets/songs/Magic_shop.mp3";
@@ -38,8 +39,7 @@ export const songs: songType[] = [
     id: 4,
     name: "Magic Shop",
     artist: "BTS",
-    audio:
-      "https://github.com/akhil683/Whose_Portfolio/blob/main/src/assets/songs/Magic_shop.mp3",
+    audio: magicshopAudio,
     img: magicshop,
   },
   {
@@ -48,6 +48,13 @@ export const songs: songType[] = [
     artist: "Deepak Rathore",
     audio: tutapullAudio,
     img: tutapull,
+  },
+  {
+    id: 6,
+    name: "Euporia",
+    artist: "Kendrick Lamar",
+    audio: tutapullAudio,
+    img: euphoria,
   },
 ];
 

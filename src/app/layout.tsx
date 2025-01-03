@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
-
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Akhil Palsra",
     description: "Developer, Peace, Wanna travel the World !",
-    url: "https://www.akhilpalsra.dev",
+    url: "https://www.akkhil.dev",
     siteName: "Akhil_Palsra",
     locale: "en_US",
     type: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Akhil Palsra",
     card: "summary_large_image",
-    creator: "@akhil_web",
+    creator: "@akkhil_dev",
   },
 };
 
@@ -38,6 +38,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );

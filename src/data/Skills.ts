@@ -32,16 +32,8 @@ const Skills: SkillsType[] = [
     url: "https://reactnative.dev/",
   },
   {
-    name: "Firebase",
-    url: "https://firebase.google.com/",
-  },
-  {
     name: "Redux",
     url: "https://redux.js.org/",
-  },
-  {
-    name: "Appwrite",
-    url: "https://appwrite.io/",
   },
   {
     name: "React Query",
@@ -50,6 +42,14 @@ const Skills: SkillsType[] = [
   {
     name: "MongoDB",
     url: "",
+  },
+  {
+    name: "Drizzle",
+    url: "",
+  },
+  {
+    name: "Firebase",
+    url: "https://firebase.google.com/",
   },
   {
     name: "Lua",

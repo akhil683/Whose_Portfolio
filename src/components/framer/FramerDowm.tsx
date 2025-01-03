@@ -10,7 +10,7 @@ const FramerDown = ({ children }: { children: ReactNode }) => {
     if (isInView) {
       maincontrols.start("show");
     }
-  }, [isInView]);
+  }, [isInView, maincontrols]);
 
   return (
     <div ref={ref} className="relative">
