@@ -2,6 +2,7 @@ import { getPostsMeta, getPostByName } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import "highlight.js/styles/github-dark.css"
+import { UnderlineIcon } from "lucide-react";
 
 export const revalidate = 3000
 
@@ -37,12 +38,12 @@ export const generateMetadata = async ({
 const Post = async ({ params: { postId } }: Props) => {
   const post = await getPostByName(`${postId}.mdx`)
 
-  if (!post) notFound()
+  // if (!post) notFound()
 
-  const { meta, content } = post
+  const { meta, content } = post!
 
   return (
-    <main className="px-6 bg-gradient-radial from-black via-back to-[#111] py-12">
+    <main className="px-6 bg-[#111] py-12">
       <div className="max-w-[700px] mx-auto">
         <Link
           href="/"

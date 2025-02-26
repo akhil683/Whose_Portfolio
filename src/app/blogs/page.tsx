@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 const Blogs = () => {
 
   return (
-    <main className="bg-gradient-radial from-black to-[#111] min-h-screen px-4 flex flex-col pt-16 md:items-center">
-      <div className="max-w-[600px]">
-        <h1 className="text-2xl mb-12 hover:no-underline underline underline-offset-8 decoration-[#999]">
+    <main className="bg-[#111] min-h-screen px-4 flex flex-col pt-16 md:items-center">
+      <div className="max-w-5xl">
+        <h1 className="text-2xl mb-12 hover:no-underline text-white underline underline-offset-8 decoration-[#999]">
           blogs
         </h1>
         <Suspense fallback={<h1 className="text-gray-300">Loading...</h1>}>

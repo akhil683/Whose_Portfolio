@@ -14,7 +14,7 @@ const MusicBox = ({ song }: { song: songType }) => {
         />
       </div>
       <div className="flex flex-col justify-start items-start">
-        <h4 className="md:text-lg text-base">{song.name}</h4>
+        <h4 className="md:text-lg text-base text-white">{song.name}</h4>
         <p className="text-sm text-[#999]">{song.artist}</p>
       </div>
     </button>
