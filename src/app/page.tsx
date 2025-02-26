@@ -1,5 +1,5 @@
 import { GetInTouch } from "@/components/GetInTouch";
-import { ExternalLink, Github, Linkedin, Mail, MapPin, Twitter } from "lucide-react"
+import { ExternalLink, Github, Mail, MapPin, Twitter } from "lucide-react"
 
 export default async function Home() {
   return (
@@ -14,7 +14,9 @@ export default async function Home() {
               Himachal, India
             </p>
           </div>
-          <p className="text-gray-300 mt-6">Hi, I’m a software developer. I have experience working with two startups to build their platforms from scratch.. When I’m not coding, I’m probably traveling or trying to hit 150wpm (stuck at 130-140, but hey, close enough) 😅. Terminal and Neovim are my happy places 💻. Let’s build something cool—or at least make it run without crashing!</p>
+          <p className="text-gray-300 mt-6 max-md:text-sm">
+            Hi, I’m a software developer. I have experience working with two startups to build their platforms from scratch.. When I’m not coding, I’m probably traveling or trying to hit 150wpm (stuck at 130-140, but hey, close enough) 😅. Terminal and Neovim are my happy places 💻. Let’s build something cool—or at least make it run without crashing!
+          </p>
         </div>
 
         <section className="text-white flex flex-col gap-8">
@@ -55,7 +57,7 @@ export default async function Home() {
             <div className="flex justify-between items-center">
               <h3 className="font-semibold">Cloud Sync</h3>
               <a href="https://github.com/akhil683/Cloud-Sync" target="_blank">
-                <ExternalLink className="text-gray-300 hover:text-white w-4 h-4" />
+                <Github className="text-gray-300 hover:text-white w-4 h-4" />
               </a>
             </div>
             <p className="text-gray-400 mt-1 max-md:text-sm">
@@ -69,13 +71,13 @@ export default async function Home() {
           <div className="space-y-8">
             <div className="relative pl-8 border-l">
               <div className="absolute w-3 h-3 bg-white rounded-full -left-[7px]" />
-              <h4 className="font-bold">Software Developer Inter at ZeroEqualOne</h4>
+              <h4 className="font-bold">Software Developer Intern at ZeroEqualOne</h4>
               <p className="text-gray-400">Jan 2025 - present</p>
               <p className="mt-2 text-gray-300">Building a quiz platform where student can prepare for exams and track their progress.</p>
             </div>
             <div className="relative pl-8 border-l">
               <div className="absolute w-3 h-3 bg-white rounded-full -left-[7px]" />
-              <h4 className="font-bold">Software Developer Inter at Stakeazy</h4>
+              <h4 className="font-bold">Software Developer Intern at Stakeazy</h4>
               <p className="text-gray-400">Jan 2025 - present</p>
               <p className="mt-2 text-gray-300">Developer real-estate platform from scratch, where people can invest in lands.</p>
             </div>
@@ -91,16 +93,13 @@ export default async function Home() {
       <div className="h-[1px] bg-gray-500" />
       <GetInTouch />
       <div className="flex gap-6 justify-center items-center">
-        <a href="">
+        <a href="https://github.com/akhil683">
           <Github className="text-gray-300 hover:text-gray-100" />
         </a>
-        <a href="">
+        <a href="https://x.com/akkhil_dev">
           <Twitter className="text-gray-300 hover:text-gray-100" />
         </a>
-        <a href="">
-          <Linkedin className="text-gray-300 hover:text-gray-100" />
-        </a>
-        <a href="">
+        <a href="mailto:akhilpalsra@gmail.com">
           <Mail className="text-gray-300 hover:text-gray-100" />
         </a>
       </div>
