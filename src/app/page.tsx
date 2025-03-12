@@ -17,6 +17,9 @@ export default async function Home() {
           </div>
           <p className="text-gray-300 mt-6 max-md:text-sm">
             Hi, I’m a software developer. I have experience working with two startups to build their platforms from scratch.. When I’m not coding, I’m probably traveling or trying to hit 150wpm (stuck at 130-140, but hey, close enough) 😅. Terminal and Neovim are my happy places. 💻
+            <br />
+            <br />
+            Know more about me <a href="https://chat.akkhil.dev" className="text-blue-400 hover:underline">here</a>
           </p>
         </div>
 
