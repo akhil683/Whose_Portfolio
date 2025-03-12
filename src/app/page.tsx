@@ -111,13 +111,13 @@ export default async function Home() {
             <div className="relative pl-8 border-l">
               <div className="absolute w-3 h-3 bg-white rounded-full -left-[7px]" />
               <h4 className="font-bold">Software Developer Intern at ZeroEqualOne</h4>
-              <p className="text-gray-400">Jan 2025 - present</p>
+              <p className="text-gray-400">Jan 2025 - Feb 2025</p>
               <p className="mt-2 text-gray-300">Building a quiz platform where student can prepare for exams and track their progress.</p>
             </div>
             <div className="relative pl-8 border-l">
               <div className="absolute w-3 h-3 bg-white rounded-full -left-[7px]" />
               <h4 className="font-bold">Software Developer Intern at Stakeazy</h4>
-              <p className="text-gray-400">Jan 2025 - present</p>
+              <p className="text-gray-400">Sept 2024 - Nov 2024</p>
               <p className="mt-2 text-gray-300">Developer real-estate platform from scratch, where people can invest in lands.</p>
             </div>
             <div className="relative pl-8 border-l">
