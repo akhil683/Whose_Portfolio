@@ -201,7 +201,7 @@ export default async function Home() {
         <a href="https://x.com/akkhil_dev">
           <Twitter className="text-gray-300 hover:text-gray-100" />
         </a>
-        <a href="mailto:akhilpalsra@gmail.com">
+        <a href="mailto:hello@akkhil.dev">
           <Mail className="text-gray-300 hover:text-gray-100" />
         </a>
       </div>
