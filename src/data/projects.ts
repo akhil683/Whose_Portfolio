@@ -107,9 +107,8 @@ const Projects: ProjectType[] = [
       "Typescript",
     ],
     github: "https://github.com/akhil683/Cloud-Sync",
-    live: "https://github.com/akhil683/Cloud-Sync",
+    live: "",
   },
-
   {
     id: 6,
     name: "TechFix-Shop",
@@ -126,13 +125,14 @@ const Projects: ProjectType[] = [
       "React Query",
     ],
     github: "https://github.com/akhil683/TechFix-Shop",
-    live: "repair-shop-akhil.vercel.app",
+    live: "https://techfix.akkhil.dev",
   },
+
   {
     id: 7,
-    name: "TechFix-Shop",
+    name: "My Coll",
     image: techfixImg,
-    description: "Platform to manage employee and customers tickets in a Shop.",
+    description: "Zoom Clone with scheduling and recording the meeting",
     techStack: [
       "Nextjs",
       "Tanstack Table",
@@ -143,16 +143,15 @@ const Projects: ProjectType[] = [
       "Typescript",
       "React Query",
     ],
-    github: "https://github.com/akhil683/TechFix-Shop",
-    live: "repair-shop-akhil.vercel.app",
+    github: "https://github.com/akhil683/zoom-clone-YT",
+    live: "https://mycoll.akkhil.dev",
   },
-
   {
     id: 8,
     name: "Doctor App",
     image: doctorImg,
     description:
-      "Promotion website for a platform which can be used by doctor to easily manage their Patient's Records",
+      "Promotion website for a platform which can be used by doctor to easily manage their Patient's Records (credit: JS Mastery)",
     techStack: [
       "Reactjs",
       "TailwindCSS",
@@ -161,10 +160,46 @@ const Projects: ProjectType[] = [
       "Firebase",
     ],
     github: "https://github.com/akhil683/doctor-site",
-    live: "hello",
+    live: "https://doctor.akkhil.dev",
   },
   {
     id: 9,
+    name: "NITH Chess",
+    image: adventureImg,
+    description:
+      "A simple chess leaderboard for nith with admin dashboard for adding matches and creating tournaments.",
+    techStack: [
+      "Reactjs",
+      "Typescript",
+      "TailwindCSS",
+      "Appwrite",
+      "React Query",
+      "Framer Motion",
+      "Stripe",
+    ],
+    github: "https://github.com/akhil683/chess",
+    live: "https://nith-chess.vercel.app",
+  },
+  {
+    id: 10,
+    name: "Instander",
+    image: adventureImg,
+    description:
+      "Instagram UI clone with dark/light theme using React Native and NativeWind ",
+    techStack: [
+      "Reactjs",
+      "Typescript",
+      "TailwindCSS",
+      "Appwrite",
+      "React Query",
+      "Framer Motion",
+      "Stripe",
+    ],
+    github: "https://github.com/akhil683/RN-Insta",
+    live: "",
+  },
+  {
+    id: 11,
     name: "Adventure Vault",
     image: adventureImg,
     description:
@@ -179,7 +214,7 @@ const Projects: ProjectType[] = [
       "Stripe",
     ],
     github: "https://github.com/akhil683/adventure-camp",
-    live: "adventurevault.vercel.app",
+    live: "https://adventurevault.vercel.app",
   },
 ];
 export default Projects;

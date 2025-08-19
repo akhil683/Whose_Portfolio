@@ -2,14 +2,12 @@ import React, { Suspense } from "react";
 import { Metadata } from "next";
 import BlogPreview from "@/components/BlogPreview";
 
-
 export const metadata: Metadata = {
   title: "Akhil's Blogs",
   description: "In these blog posts, I share my experiences !",
 };
 
 const Blogs = () => {
-
   return (
     <main className="bg-[#111] min-h-screen px-4 flex flex-col pt-16 md:items-center">
       <div className="max-w-5xl">

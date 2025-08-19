@@ -51,9 +51,11 @@ export default async function Home() {
                   <a href={project.github} target="_blank">
                     <Github className="text-gray-300 hover:text-white w-4 h-4" />
                   </a>
-                  <a href={project.live} target="_blank">
-                    <ExternalLink className="text-gray-300 hover:text-white w-4 h-4" />
-                  </a>
+                  {project.live !== "" && (
+                    <a href={project.live} target="_blank">
+                      <ExternalLink className="text-gray-300 hover:text-white w-4 h-4" />
+                    </a>
+                  )}
                 </div>
               </div>
               <p className="text-gray-400 mt-1 max-md:text-sm">
@@ -61,14 +63,14 @@ export default async function Home() {
               </p>
             </div>
           ))}
-          {/* <div className="w-full flex justify-end text-sm text-gray-300"> */}
-          {/*   <Link */}
-          {/*     href={"/projects"} */}
-          {/*     className="flex gap-2 border-b-2 border-transparent hover:border-gray-500 " */}
-          {/*   > */}
-          {/*     Small Projects <ArrowRight className="w-4 h-4" /> */}
-          {/*   </Link> */}
-          {/* </div> */}
+          <div className="w-full flex justify-end text-sm text-gray-300">
+            <Link
+              href={"/projects"}
+              className="flex gap-2 border-b-2 border-transparent hover:border-gray-500 "
+            >
+              Small Projects <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </section>
         {/* Experience */}
         <section className="text-white">
