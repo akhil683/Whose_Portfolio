@@ -1,6 +1,15 @@
 import BlogPreview from "@/components/BlogPreview";
 import { GetInTouch } from "@/components/GetInTouch";
-import { ExternalLink, Github, Mail, MapPin, Twitter } from "lucide-react";
+import Projects from "@/data/projects";
+import {
+  ArrowRight,
+  ExternalLink,
+  Github,
+  Mail,
+  MapPin,
+  Twitter,
+} from "lucide-react";
+import Link from "next/link";
 
 export default async function Home() {
   return (
@@ -34,119 +43,32 @@ export default async function Home() {
 
         <section className="text-white flex flex-col gap-8">
           <h2 className="text-2xl font-bold">Projects</h2>
-          <div>
-            <div className="flex justify-between items-center">
-              <h3 className="font-semibold">Commit Hub</h3>
-              <div className="flex items-center gap-4">
-                <a
-                  href="https://github.com/akhil683/Commit-Hub"
-                  target="_blank"
-                >
-                  <Github className="text-gray-300 hover:text-white w-4 h-4" />
-                </a>
-                <a href="https://commithub.akkhil.dev" target="_blank">
-                  <ExternalLink className="text-gray-300 hover:text-white w-4 h-4" />
-                </a>
+          {Projects.slice(0, 5).map((project) => (
+            <div key={project.id}>
+              <div className="flex justify-between items-center">
+                <h3 className="font-semibold">{project.name}</h3>
+                <div className="flex items-center gap-4">
+                  <a href={project.github} target="_blank">
+                    <Github className="text-gray-300 hover:text-white w-4 h-4" />
+                  </a>
+                  <a href={project.live} target="_blank">
+                    <ExternalLink className="text-gray-300 hover:text-white w-4 h-4" />
+                  </a>
+                </div>
               </div>
+              <p className="text-gray-400 mt-1 max-md:text-sm">
+                {project.description}
+              </p>
             </div>
-            <p className="text-gray-400 mt-1 max-md:text-sm">
-              An application that helps developers keep their GitHub
-              contribution graph updated, even for work done on branches other
-              than main.
-            </p>
-          </div>
-          <div>
-            <div className="flex justify-between items-center">
-              <h3 className="font-semibold">Ping Pong</h3>
-              <div className="flex items-center gap-4">
-                <a href="https://github.com/akhil683/PingPong" target="_blank">
-                  <Github className="text-gray-300 hover:text-white w-4 h-4" />
-                </a>
-                <a href="https://pingpong.akkhil.dev" target="_blank">
-                  <ExternalLink className="text-gray-300 hover:text-white w-4 h-4" />
-                </a>
-              </div>
-            </div>
-            <p className="text-gray-400 mt-1 max-md:text-sm">
-              A simple scribble alternative with extra features for drawing,
-              game management and authentication
-            </p>
-          </div>
-          {/* <div> */}
-          {/*   <div className="flex justify-between items-center"> */}
-          {/*     <h3 className="font-semibold ">Page Craft (building)</h3> */}
-          {/*     <div className="flex items-center gap-4"> */}
-          {/*       <a */}
-          {/*         href="https://github.com/akhil683/Page-Craft" */}
-          {/*         target="_blank" */}
-          {/*       > */}
-          {/*         <Github className="text-gray-300 hover:text-white w-4 h-4" /> */}
-          {/*       </a> */}
-          {/*       <a href="https://pagecraft.akkhil.dev" target="_blank"> */}
-          {/*         <ExternalLink className="text-gray-300 hover:text-white w-4 h-4" /> */}
-          {/*       </a> */}
-          {/*     </div> */}
-          {/*   </div> */}
-          {/*   <p className="text-gray-400 mt-1 max-md:text-sm"> */}
-          {/*     A web-based platform that empowers users to create, publish, and */}
-          {/*     review books. Authors can get AI-powered assistance, publish their */}
-          {/*     work, and engage with readers! */}
-          {/*   </p> */}
+          ))}
+          {/* <div className="w-full flex justify-end text-sm text-gray-300"> */}
+          {/*   <Link */}
+          {/*     href={"/projects"} */}
+          {/*     className="flex gap-2 border-b-2 border-transparent hover:border-gray-500 " */}
+          {/*   > */}
+          {/*     Small Projects <ArrowRight className="w-4 h-4" /> */}
+          {/*   </Link> */}
           {/* </div> */}
-
-          <div>
-            <div className="flex justify-between items-center">
-              <h3 className="font-semibold">TechFix Shop</h3>
-              <div className="flex items-center gap-4">
-                <a
-                  href="https://github.com/akhil683/TechFix-Shop"
-                  target="_blank"
-                >
-                  <Github className="text-gray-300 hover:text-white w-4 h-4" />
-                </a>
-                <a href="https://techfix.akkhil.dev" target="_blank">
-                  <ExternalLink className="text-gray-300 hover:text-white w-4 h-4" />
-                </a>
-              </div>
-            </div>
-            <p className="text-gray-400 mt-1 max-md:text-sm">
-              Platform to efficiently manage employee and customers tickets in a
-              Shop.
-            </p>
-          </div>
-
-          <div>
-            <div className="flex justify-between items-center">
-              <h3 className="font-semibold">Cloud Sync</h3>
-              <a href="https://github.com/akhil683/Cloud-Sync" target="_blank">
-                <Github className="text-gray-300 hover:text-white w-4 h-4" />
-              </a>
-            </div>
-            <p className="text-gray-400 mt-1 max-md:text-sm">
-              Gallery app built with React Native and Expo that syncs your
-              photos between your device and the cloud.
-            </p>
-          </div>
-
-          <div>
-            <div className="flex justify-between items-center">
-              <h3 className="font-semibold">Team Hermetica</h3>
-              <div className="flex items-center gap-4">
-                <a
-                  href="https://github.com/akhil683/Hermetica-Club"
-                  target="_blank"
-                >
-                  <Github className="text-gray-300 hover:text-white w-4 h-4" />
-                </a>
-                <a href="https://teamhermetica.in" target="_blank">
-                  <ExternalLink className="text-gray-300 hover:text-white w-4 h-4" />
-                </a>
-              </div>
-            </div>
-            <p className="text-gray-400 mt-1 max-md:text-sm">
-              Build college club's website to showcase our projects and events.
-            </p>
-          </div>
         </section>
         {/* Experience */}
         <section className="text-white">
