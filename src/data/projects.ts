@@ -20,7 +20,7 @@ interface ProjectType {
 const Projects: ProjectType[] = [
   {
     id: 1,
-    name: "Wiki Reel",
+    name: "Etrant",
     image: hermeticaImg,
     description:
       "AI-powered microlearning for exams. Wikipedia, news & questions in reels like format.",
@@ -34,7 +34,7 @@ const Projects: ProjectType[] = [
       "NeonDB (Postgres)",
       "Wikipedia API",
     ],
-    github: "https://github.com/akhil683/wiki-reel",
+    github: "https://github.com/akhil683/etrant",
     live: "https://wiki.akkhil.dev",
   },
   {
@@ -132,7 +132,8 @@ const Projects: ProjectType[] = [
     id: 7,
     name: "My Coll",
     image: techfixImg,
-    description: "Zoom Clone with scheduling and recording the meeting",
+    description:
+      "Zoom Clone with scheduling and recording the meeting (credit: JS Mastery)",
     techStack: [
       "Nextjs",
       "Tanstack Table",
@@ -151,7 +152,7 @@ const Projects: ProjectType[] = [
     name: "Doctor App",
     image: doctorImg,
     description:
-      "Promotion website for a platform which can be used by doctor to easily manage their Patient's Records (credit: JS Mastery)",
+      "Promotion website for a platform which can be used by doctor to easily manage their Patient's Records",
     techStack: [
       "Reactjs",
       "TailwindCSS",

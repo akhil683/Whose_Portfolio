@@ -17,10 +17,10 @@ const PlaySong = () => {
 
   return (
     <>
-      <audio ref={audioRef} src={populargirlAudio} loop />
+      <audio ref={audioRef} src={populargirlAudio} className="z-50" loop />
       <button
         onClick={() => setPlay(!play)}
-        className="fixed bottom-8 right-8 shadow-black shadow-2xl text-xl px-4 py-2 hover:bg-gray-300 duration-200 md:text-xl rounded-full bg-white text-black"
+        className="fixed bottom-8 right-8 shadow-black shadow-2xl text-xl px-4 py-2 hover:bg-gray-300 duration-200 md:text-xl rounded-full bg-white text-black z-50"
       >
         {play ? "Pause" : "Play"}
       </button>
