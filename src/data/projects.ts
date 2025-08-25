@@ -35,7 +35,7 @@ const Projects: ProjectType[] = [
       "Wikipedia API",
     ],
     github: "https://github.com/akhil683/etrant",
-    live: "https://wiki.akkhil.dev",
+    live: "https://etrant.akkhil.dev",
   },
   {
     id: 2,
