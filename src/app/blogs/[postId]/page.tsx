@@ -1,28 +1,24 @@
 import { getPostsMeta, getPostByName } from "@/lib/posts";
-import { notFound } from "next/navigation";
 import Link from "next/link";
-import "highlight.js/styles/github-dark.css"
-import { UnderlineIcon } from "lucide-react";
+import "highlight.js/styles/github-dark.css";
 
-export const revalidate = 3000
+export const revalidate = 3000;
 
 type Props = {
   params: {
-    postId: string,
-  }
-}
+    postId: string;
+  };
+};
 export async function generateStaticParams() {
   const posts = await getPostsMeta();
-  if (!posts) return []
+  if (!posts) return [];
 
   return posts.map((post) => ({
     postId: post.id,
   }));
 }
 
-export const generateMetadata = async ({
-  params: { postId },
-}: Props) => {
+export const generateMetadata = async ({ params: { postId } }: Props) => {
   const post = await getPostByName(`${postId}.mdx`);
   if (!post) {
     return {
@@ -36,11 +32,11 @@ export const generateMetadata = async ({
 };
 
 const Post = async ({ params: { postId } }: Props) => {
-  const post = await getPostByName(`${postId}.mdx`)
+  const post = await getPostByName(`${postId}.mdx`);
 
   // if (!post) notFound()
 
-  const { meta, content } = post!
+  const { meta, content } = post!;
 
   return (
     <main className="px-6 bg-[#111] py-12">
@@ -59,7 +55,7 @@ const Post = async ({ params: { postId } }: Props) => {
         <hr className="bg-gray-600 h-[2px] border-none" />
         <article
           id="blogContent"
-          className="prose prose-invert max-w-[700px]"
+          className="prose prose-invert max-w-[700px] mt-4"
         >
           {content}
         </article>
