@@ -55,7 +55,7 @@ const Projects: ProjectType[] = [
       "Stripe",
     ],
     github: "https://github.com/akhil683/Commit-Hub",
-    live: "auto-commit-hub.vercel.app",
+    live: "https://commithub.akkhil.dev",
   },
   {
     id: 3,
