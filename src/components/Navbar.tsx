@@ -19,14 +19,6 @@ const Navbar = () => {
             blogs
           </button>
         </Link>
-        <a
-          href="https://drive.google.com/drive/u/0/folders/18Fb2_6nbW9dFij1l5mw8JPO936P5oZCO"
-          target="_blank"
-        >
-          <button className="underline-offset-4 p-2 hover:text-white duration-200">
-            Resume
-          </button>
-        </a>
         <Link href="/music">
           <button className="underline-offset-4 p-2 hover:text-white duration-200">
             Music
@@ -64,12 +56,6 @@ const Navbar = () => {
             <Link href="/music" className="py-2">
               Music
             </Link>
-            <a
-              href="https://drive.google.com/drive/u/0/folders/18Fb2_6nbW9dFij1l5mw8JPO936P5oZCO"
-              target="_blank"
-            >
-              <button className="py-2">Resume</button>
-            </a>
           </div>
         </div>
       </div>
