@@ -27,9 +27,10 @@ export default async function Home() {
           </div>
           <p className="text-gray-300 mt-6 max-md:text-sm">
             Hi, I’m a software developer. I have experience working with two
-            startups to build their platforms from scratch. When I’m not coding,
-            I’m probably traveling or trying to hit 150wpm (close enough) 😅.
-            Terminal and Neovim are my happy places. 💻
+            startups to build their platforms from scratch. Currently, I am
+            working as a Software Engineering Intern at Baker Hughes. When I’m
+            not coding, I’m probably traveling or trying to hit 150wpm (close
+            enough). Terminal and Neovim are my happy places.
             <br />
             Know more about me{" "}
             <a
@@ -78,33 +79,49 @@ export default async function Home() {
           <div className="space-y-8">
             <div className="relative pl-8 border-l">
               <div className="absolute w-3 h-3 bg-white rounded-full -left-[7px]" />
-              <h4 className="font-bold">
+              <h4 className="font-semibold">
+                System Engineer Intern at Baker Hughes
+              </h4>
+              <p className="text-gray-400 max-md:text-sm">Jan 2026 - Present</p>
+              <p className="mt-2 text-gray-300 max-md:text-sm">
+                Building and debugging...
+              </p>
+            </div>
+            <div className="relative pl-8 border-l">
+              <div className="absolute w-3 h-3 bg-white rounded-full -left-[7px]" />
+              <h4 className="font-semibold">
                 Software Developer Intern at ZeroEqualOne
               </h4>
-              <p className="text-gray-400">Jan 2025 - Feb 2025</p>
-              <p className="mt-2 text-gray-300">
+              <p className="text-gray-400 max-md:text-sm">
+                Jan 2025 - Feb 2025
+              </p>
+              <p className="mt-2 text-gray-300 max-md:text-sm">
                 Building a quiz platform where student can prepare for exams and
                 track their progress.
               </p>
             </div>
             <div className="relative pl-8 border-l">
               <div className="absolute w-3 h-3 bg-white rounded-full -left-[7px]" />
-              <h4 className="font-bold">
+              <h4 className="font-semibold">
                 Software Developer Intern at Stakeazy
               </h4>
-              <p className="text-gray-400">Sept 2024 - Nov 2024</p>
-              <p className="mt-2 text-gray-300">
+              <p className="text-gray-400 max-md:text-sm">
+                Sept 2024 - Nov 2024
+              </p>
+              <p className="mt-2 text-gray-300 max-md:text-sm">
                 Developer real-estate platform from scratch, where people can
                 invest in lands.
               </p>
             </div>
             <div className="relative pl-8 border-l">
               <div className="absolute w-3 h-3 bg-white rounded-full -left-[7px]" />
-              <h4 className="font-bold">
+              <h4 className="font-semibold">
                 Web Development Lead at Team Hermetica
               </h4>
-              <p className="text-gray-400">Dec 2023 - Dec 2025</p>
-              <p className="mt-2 text-gray-300">
+              <p className="text-gray-400 max-md:text-sm">
+                Dec 2023 - Dec 2025
+              </p>
+              <p className="mt-2 text-gray-300 max-md:text-sm">
                 Build college club's site to showcase their work.
               </p>
             </div>
