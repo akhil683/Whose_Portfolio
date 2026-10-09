@@ -38,6 +38,26 @@ const Projects: ProjectType[] = [
     live: "https://etrant.akkhil.dev",
   },
   {
+    id: 10,
+    name: "Alpine Craft",
+    image: commithubImg,
+    description:
+      "An e-commerce platform for booking treks and adventure activities.",
+    techStack: [
+      "Nextjs",
+      "Typescript",
+      "NextAuth",
+      "Webhooks",
+      "Drizzle",
+      "NeonDB",
+      "React Query",
+      "Framer Motion",
+      "Stripe",
+    ],
+    github: "https://github.com/akhil683/alpine-craft",
+    live: "https://alpine-craft.vercel.app",
+  },
+  {
     id: 2,
     name: "Commit Hub",
     image: commithubImg,
