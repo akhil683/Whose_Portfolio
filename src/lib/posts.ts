@@ -23,6 +23,7 @@ export async function getPostByName(
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
         "X-GitHub-Api-Version": "2022-11-28",
       },
+      cache: "no-store",
     },
   );
   if (!res.ok) return undefined;
@@ -78,8 +79,8 @@ export async function getPostsMeta(): Promise<Meta[] | undefined> {
         Accept: "application/vnd.github+json",
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
         "X-GitHub-Api-Version": "2022-11-28",
-        "Cache-Control": "no-cache",
       },
+      cache: "no-store",
     },
   );
 
@@ -87,6 +88,7 @@ export async function getPostsMeta(): Promise<Meta[] | undefined> {
 
   // Contents API returns an array
   const repoContents: { path: string; type: string }[] = await res.json();
+  console.log("repoContents", repoContents)
 
   // Get all `.mdx` files (at repo root for now)
   const filesArray = repoContents
@@ -95,9 +97,11 @@ export async function getPostsMeta(): Promise<Meta[] | undefined> {
 
   const posts: Meta[] = [];
 
+  console.log("files array", filesArray)
   for (const file of filesArray) {
     const post = await getPostByName(file);
     if (post) {
+      console.log(post.meta)
       posts.push(post.meta);
     }
   }
